@@ -65,17 +65,8 @@ let genapTotal = menentukanTotal(genap);
 let ganjilTotal = menentukanTotal(ganjil);
 
 // RATA-RATA GANJIL GENAP
-const menentukanRataRata = (bilangan) => {
-    let total = 0
-    let rataRata = 0;
-    for(let i=0 ; i<bilangan.length ; i++){
-        total = total + bilangan[i];
-    }
-    rataRata = total/bilangan.length;
-    return (rataRata);
-}
-let genapRataRata = menentukanRataRata(genap);
-let ganjilRataRata = menentukanRataRata(ganjil);
+let genapRataRata = (menentukanTotal(genap))/genap.length;
+let ganjilRataRata = (menentukanTotal(ganjil))/ganjil.length;
 
 
 // TEST DEBUGGING
@@ -88,8 +79,8 @@ console.log("Max Genap: " + menentukanMax(genap));
 console.log("Max Ganjil: " + menentukanMax(ganjil));
 console.log("Total Genap: " + menentukanTotal(genap));
 console.log("Total Ganjil: " + menentukanTotal(ganjil));
-console.log("Rata-rata Genap: " + menentukanRataRata(genap));
-console.log("Rata-rata Ganjil: " + menentukanRataRata(ganjil));
+console.log("Rata-rata Genap: " + genapRataRata);
+console.log("Rata-rata Ganjil: " + ganjilRataRata);
 
 
 // PERBANDINGAN KEDUA ARRAY
